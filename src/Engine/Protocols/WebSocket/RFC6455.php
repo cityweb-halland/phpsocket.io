@@ -42,7 +42,7 @@ class RFC6455 implements \Workerman\Protocols\ProtocolInterface
      * 检查包的完整性
      * @param string $buffer
      */
-    public static function input($buffer, ConnectionInterface $connection)
+    public static function input(string $buffer, ConnectionInterface $connection)
     {
         // 数据长度
         $recv_len = strlen($buffer);
