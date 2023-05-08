@@ -192,7 +192,7 @@ class RFC6455 implements \Workerman\Protocols\ProtocolInterface
      * @param string $buffer
      * @return string
      */
-    public static function encode(string $buffer, ConnectionInterface $connection)
+    public static function encode(string $buffer, ConnectionInterface $connection): string
     {
         $len = strlen($buffer);
         if(empty($connection->websocketHandshake))
@@ -237,7 +237,7 @@ class RFC6455 implements \Workerman\Protocols\ProtocolInterface
      * @param string $buffer
      * @return string
      */
-    public static function decode(string $buffer, ConnectionInterface $connection)
+    public static function decode(string $buffer, ConnectionInterface $connection): mixed
     {
         $len = $masks = $data = $decoded = null;
         $len = ord($buffer[1]) & 127;
