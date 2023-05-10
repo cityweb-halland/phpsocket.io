@@ -192,7 +192,7 @@ class RFC6455 implements \Workerman\Protocols\ProtocolInterface
      * @param string $buffer
      * @return string
      */
-    public static function encode(string $buffer, ConnectionInterface $connection): string
+    public static function encode(mixed $buffer, ConnectionInterface $connection): string
     {
         $len = strlen($buffer);
         if(empty($connection->websocketHandshake))
