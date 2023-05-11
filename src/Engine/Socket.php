@@ -236,7 +236,9 @@ class Socket extends Emitter
         if ('closed' !== $this->readyState) 
         {
             Timer::del($this->pingTimeoutTimer);
-            Timer::del($this->checkIntervalTimer);
+			if(is_int($this->checkIntervalTimer)){
+				Timer::del($this->checkIntervalTimer);
+			}
             $this->checkIntervalTimer = null;
             Timer::del($this->upgradeTimeoutTimer);
             // clean writeBuffer in next tick, so developers can still
