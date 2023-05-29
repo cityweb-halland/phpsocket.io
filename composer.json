@@ -5,7 +5,7 @@
     "homepage": "http://www.workerman.net",
     "license" : "MIT",
     "require": {
-        "workerman/workerman" : "*",
+        "workerman/workerman" : "php8",
         "workerman/channel" : "*"
     },
     "autoload": {
