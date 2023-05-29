@@ -6,7 +6,7 @@
     "license" : "MIT",
     "require": {
         "workerman/workerman" : "dev-php8",
-        "workerman/channel" : "*"
+        "workerman/channel" : "dev-php8"
     },
     "autoload": {
         "psr-4": {"PHPSocketIO\\": "./src"}
